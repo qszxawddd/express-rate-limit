@@ -20,6 +20,11 @@ const limiter = rateLimit({
         res.sendFile(path.join(__dirname, 'public', 'busy.html'));
     }
 });
+// 靜態資源（CSS/JS/圖片）不受速率限制，確保等候頁面能正常載入
+app.use('/stylesheets', express.static(path.join(__dirname, 'public', 'stylesheets')));
+app.use('/javascripts', express.static(path.join(__dirname, 'public', 'javascripts')));
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
+
 app.use(limiter);
 
 app.use(logger('dev'));
