@@ -1,0 +1,247 @@
+/* === Shopee 風格等候頁面樣式 === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif;
+    background: linear-gradient(135deg, #EE4D2D 0%, #FF6633 50%, #FFAA80 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 40px 36px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #EE4D2D;
+    letter-spacing: 1px;
+}
+
+/* 吉祥物 */
+.mascot-wrapper {
+    margin: 10px 0 20px;
+}
+
+.mascot {
+    width: 120px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2) rotate(10deg); }
+    60% { transform: scale(0.9) rotate(-5deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+/* 標題 */
+.title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* 安撫語句 */
+.comfort-message {
+    background: #FFF5F2;
+    border-left: 4px solid #EE4D2D;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: #EE4D2D;
+    margin-bottom: 24px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+}
+
+/* 倒數計時 */
+.timer-section {
+    margin-bottom: 20px;
+}
+
+.timer-label {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.timer {
+    font-size: 48px;
+    font-weight: 700;
+    color: #EE4D2D;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 2px;
+}
+
+/* 進度條 */
+.progress-wrapper {
+    margin-bottom: 24px;
+}
+
+.progress-bar {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #EE4D2D, #FF6633);
+    border-radius: 10px;
+    transition: width 1s linear;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 蝦幣提示 */
+.coin-tip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #FFFBEA;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #B8860B;
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* 重試按鈕 */
+.retry-btn {
+    background: #EE4D2D;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.15s;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.retry-btn:hover {
+    background: #D4441F;
+    transform: scale(1.02);
+}
+
+.retry-btn:active {
+    transform: scale(0.98);
+}
+
+.retry-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 替代管道 */
+.alt-links {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.alt-links p {
+    margin-bottom: 4px;
+}
+
+.alt-links a {
+    color: #EE4D2D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.alt-links a:hover {
+    text-decoration: underline;
+}
+
+.alt-links .divider {
+    margin: 0 8px;
+    color: #ddd;
+}
+
+/* RWD 響應式 */
+@media (max-width: 480px) {
+    .container {
+        padding: 28px 20px;
+        border-radius: 12px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .timer {
+        font-size: 36px;
+    }
+
+    .mascot {
+        width: 90px;
+    }
+}

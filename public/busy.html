@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>busy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee 蝦皮購物 - 伺服器忙碌中</title>
+    <link rel="stylesheet" href="stylesheets/busy.css">
 </head>
 <body>
-<p>busy</p>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <span class="logo-icon">🛒</span>
+            <span class="logo-text">Shopee</span>
+        </div>
 
+        <!-- 吉祥物 -->
+        <div class="mascot-wrapper">
+            <img src="images/吉祥物.png" alt="Shopee 吉祥物" class="mascot" id="mascot">
+        </div>
+
+        <!-- 主標題 -->
+        <h1 class="title">哎呀！伺服器正在忙碌中</h1>
+        <p class="subtitle">太多人在搶購了，伺服器需要休息一下～</p>
+
+        <!-- 安撫語句輪播 -->
+        <div class="comfort-message" id="comfortMessage">
+            別擔心，我們正在全力恢復中！
+        </div>
+
+        <!-- 倒數計時 -->
+        <div class="timer-section">
+            <p class="timer-label">預估恢復時間</p>
+            <div class="timer" id="timer">05:00</div>
+        </div>
+
+        <!-- 進度條 -->
+        <div class="progress-wrapper">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">0%</p>
+        </div>
+
+        <!-- 蝦幣提示 -->
+        <div class="coin-tip">
+            <img src="images/蝦幣.png" alt="蝦幣" class="coin-icon">
+            <span>放心，等待期間你的蝦幣不會跑掉喔！</span>
+        </div>
+
+        <!-- 重試按鈕 -->
+        <button class="retry-btn" id="retryBtn">重新整理頁面</button>
+
+        <!-- 替代管道 -->
+        <div class="alt-links">
+            <p>也可以透過以下方式繼續購物：</p>
+            <a href="https://shopee.tw/web" target="_blank">Shopee App</a>
+            <span class="divider">|</span>
+            <a href="https://help.shopee.tw" target="_blank">聯絡客服</a>
+        </div>
+    </div>
+
+    <script src="javascripts/busy.js"></script>
 </body>
 </html>
